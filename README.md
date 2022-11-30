@@ -1,10 +1,6 @@
 # Movie_Api_Meteor
-A rendre le dimanche 15 mai
-
-### Groupe : 
-- Mael LAMBERT
-- Corentin PANNIER
-- Quentin VIEGAS
+Site pour voir les films récents populaires avec système de commentaires/like.
+Projet de cours continué en petit projet perso
 
 ### Install Dependancy and run project: 
 - ```npm i meteor-version-parser```
