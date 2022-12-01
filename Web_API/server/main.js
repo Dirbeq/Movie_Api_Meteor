@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { WebApp } from 'meteor/webapp';
 import { Mongo } from 'meteor/mongo';
 import bodyParser from 'body-parser';
+import serverConfig from './serverConfig.js';
 
 WebApp.connectHandlers.use(bodyParser.json());
 
@@ -18,7 +19,7 @@ Meteor.startup(() => {
 WebApp.connectHandlers.use('/api/movies', (req, res, next) => {
   HTTP.call('GET', 'https://api.themoviedb.org/3/discover/movie?api_key=4ec050aec0b57f2c30391a6cb27295ee&language=fr-FR', {},
       function (error, response) {
-       let moviesData = response.data;
+      let moviesData = response.data;
         res.writeHead(200);
         res.end(JSON.stringify(moviesData));
       });
